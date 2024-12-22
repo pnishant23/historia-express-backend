@@ -2,6 +2,7 @@ import cookieParser from "cookie-parser"
 import express from "express"
 import cors from "cors"
 
+
 const app = express()
 
 app.use(cors({
@@ -21,5 +22,12 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 
 app.use(cookieParser())
+
+import locationDataRoute from "./routes/locationDataRoute.js"
+
+app.use("/api/v1/locationData", locationDataRoute)
+app.get("/api/v1/check", (req, res)=>{
+    res.send('helllo')
+})
 
 export { app }

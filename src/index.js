@@ -6,12 +6,14 @@ dotenv.config({
     path: './.env'
 })
 
+const PORT = process.env.PORT || 8000
+
 connetDB()
-    .then(()=>{
-        app.listen(process.env.PORT || 8000, () => {
-            console.log("Server is running on PORT:", process.env.PORT)
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log("Server is running on PORT:", PORT)
         })
-    }) 
+    })
     .catch((err) => {
         console.log("MYAQL DB CONNECTION FAILED !!!", err)
     })
