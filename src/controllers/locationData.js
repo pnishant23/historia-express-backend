@@ -7,7 +7,7 @@ const locationData = asyncHandler(async (req, res) => {
     const { lat, lng } = req.query
     const latitude = parseFloat(lat)
     const longitude = parseFloat(lng)
-    const { data, error } = await supabase.from('location').select()
+    const { data, error } = await supabase.from('locations').select()
     console.log(error)
     if (error) throw error;
     return res.status(200).json({

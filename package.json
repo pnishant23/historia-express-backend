@@ -1,5 +1,5 @@
 {
-  "name": "driver-for-you-server",
+  "name": "historia-express-server",
   "version": "1.0.0",
   "description": "",
   "main": "./src/v1/index.js",
